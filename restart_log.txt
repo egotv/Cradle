@@ -1,0 +1,5 @@
+2025-06-19 15:38:29 - Starting Cradle RDR2 Auto-Restart Script
+2025-06-19 15:38:29 - Command: python runner.py --envConfig "./conf/env_config_rdr2_main_storyline.json"
+2025-06-19 15:38:29 - Restart delay: 5 seconds
+2025-06-19 15:38:29 - Press Ctrl+C to stop the restart loop
+2025-06-19 15:38:29 - === Restart #1 ===
