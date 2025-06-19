@@ -54,13 +54,16 @@ class TaskInferencePreprocessProvider(BaseProvider):
             images = memory.get_recent_history(constants.IMAGES_MEM_BUCKET, config.event_count)
             reasonings = memory.get_recent_history('decision_making_reasoning', config.event_count)
 
+            # Defensive programming: only iterate up to the minimum available length
+            max_events = min(len(images), len(reasonings), len(['first', 'second', 'third', 'fourth', 'fifth']), config.event_count)
+            
             image_introduction = [
                 {
                     "path": images[event_i],
                     "assistant": "",
                     "introduction": 'This is the {} screenshot of recent events. The description of this image: {}'.format(
                         ['first', 'second', 'third', 'fourth', 'fifth'][event_i], reasonings[event_i])
-                } for event_i in range(config.event_count)
+                } for event_i in range(max_events)
             ]
 
             processed_params = {
@@ -130,12 +133,15 @@ class RDR2TaskInferencePreprocessProvider(BaseProvider):
             images = memory.get_recent_history(constants.IMAGES_MEM_BUCKET, config.event_count)
             reasonings = memory.get_recent_history('decision_making_reasoning', config.event_count)
 
+            # Defensive programming: only iterate up to the minimum available length
+            max_events = min(len(images), len(reasonings), len(['first', 'second', 'third', 'fourth', 'fifth']), config.event_count)
+            
             image_introduction = [
                 {
                     "path": images[event_i], "assistant": "",
                     "introduction": 'This is the {} screenshot of recent events. The description of this image: {}'.format(
                         ['first', 'second', 'third', 'fourth', 'fifth'][event_i], reasonings[event_i])
-                } for event_i in range(config.event_count)
+                } for event_i in range(max_events)
             ]
 
             previous_summarization = memory.get_summarization()
