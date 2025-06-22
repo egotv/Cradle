@@ -69,15 +69,15 @@
         ],
         "prompt_paths": {
             "inputs": {
-                "action_planning": "./res/rdr2/prompts/inputs/decision_making.json",
-                "information_gathering": "./res/rdr2/prompts/inputs/information_gatheringjson",
+                "action_planning": "./res/rdr2/prompts/inputs/action_planning.json",
+                "information_gathering": "./res/rdr2/prompts/inputs/information_gathering.json",
                 "success_detection": "./res/rdr2/prompts/inputs/success_detection.json",
                 "self_reflection": "./res/rdr2/prompts/inputs/self_reflection.json",
                 "task_inference": "./res/rdr2/prompts/inputs/task_inference.json",
                 "information_text_gathering": "./res/rdr2/prompts/inputs/information_text_gathering.json"
             },
             "templates": {
-                "action_planning": "./res/rdr2/prompts/templates/decision_making.prompt",
+                "action_planning": "./res/rdr2/prompts/templates/action_planning.prompt",
                 "information_gathering": "./res/rdr2/prompts/templates/information_gathering.prompt",
                 "success_detection": "./res/rdr2/prompts/templates/success_detection.prompt",
                 "self_reflection": "./res/rdr2/prompts/templates/self_reflection.prompt",

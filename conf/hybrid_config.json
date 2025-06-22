@@ -1,0 +1,4 @@
+{
+    "gemini_cfg": "./conf/gemini_config.json",
+    "openai_cfg": "./conf/openai_config.json"
+  }
