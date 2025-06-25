@@ -4,3 +4,4 @@ from .combat import *
 from .map import *
 from .move import *
 from .trade_utils import *
+from .donate import *

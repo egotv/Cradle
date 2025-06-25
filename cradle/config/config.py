@@ -178,6 +178,10 @@ class Config(metaclass=Singleton):
 
         self.env_window = None  # Default value init for window handle
 
+        # Custom flag: whether the pipeline should auto-press Esc to pause after each cycle.
+        # Default False – will be overridden inside load_env_config once env_config is available.
+        self.disable_auto_pause: bool = False
+
 
     def load_env_config(self, env_config_path):
         """Load environment specific configuration."""
@@ -265,6 +269,9 @@ class Config(metaclass=Singleton):
             skill_config = default_skill_configs
 
         self.skill_configs = skill_config
+
+        # Override pause flag if specified in the env-config JSON
+        self.disable_auto_pause = kget(self.env_config, 'disable_auto_pause', default=False)
 
 
     def set_env_name(self, env_name: str) -> None:

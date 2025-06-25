@@ -53,10 +53,13 @@ class SkillExecuteProvider(BaseProvider):
         end_frame_id = self.video_recorder.get_current_frame_id()
 
         try:
-            pause_flag = self.gm.pause_game(screen_classification.lower())
+            if getattr(config, 'disable_auto_pause', False):
+                pause_flag = False
+            else:
+                pause_flag = self.gm.pause_game(screen_classification.lower())
+                if not pause_flag:
+                    self.gm.pause_game(screen_type=None)
             logger.write(f'Pause flag: {pause_flag}')
-            if not pause_flag:
-                self.gm.pause_game(screen_type=None)
         except Exception as e:
             logger.write(f"Error while pausing the game: {e}")
 

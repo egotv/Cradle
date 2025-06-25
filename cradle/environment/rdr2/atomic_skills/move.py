@@ -74,6 +74,78 @@ def stop_horse():
     io_env.key_press('ctrl', 0.5)
 
 
+@register_skill("turn_left")
+def turn_left(degrees):
+    """
+    Turns the character left by the specified degrees.
+    
+    Parameters:
+    - degrees: The number of degrees to turn left (positive value)
+    """
+    turn(-degrees)  # Use negative angle for left turn
+
+
+@register_skill("turn_right") 
+def turn_right(degrees):
+    """
+    Turns the character right by the specified degrees.
+    
+    Parameters:
+    - degrees: The number of degrees to turn right (positive value)
+    """
+    turn(degrees)  # Use positive angle for right turn
+
+
+@register_skill("move_backward")
+def move_backward(duration):
+    """
+    Moves the character backward for the specified duration.
+    
+    Parameters:
+    - duration: The duration in seconds to move backward
+    """
+    io_env.key_hold('s', duration)
+
+
+@register_skill("move_left")
+def move_left(duration):
+    """
+    Moves the character left (strafe) for the specified duration.
+    
+    Parameters:
+    - duration: The duration in seconds to move left
+    """
+    io_env.key_hold('a', duration)
+
+
+@register_skill("move_right")
+def move_right(duration):
+    """
+    Moves the character right (strafe) for the specified duration.
+    
+    Parameters:
+    - duration: The duration in seconds to move right
+    """
+    io_env.key_hold('d', duration)
+
+
+@register_skill("walk_to_location")
+def walk_to_location(forward_time, turn_angle=0):
+    """
+    Walk to a location by optionally turning and then moving forward.
+    
+    Parameters:
+    - forward_time: Duration in seconds to walk forward
+    - turn_angle: Optional angle to turn first (negative = left, positive = right)
+    """
+    if turn_angle != 0:
+        turn(turn_angle)
+        post_skill_wait(1)
+    
+    move_forward(forward_time)
+    post_skill_wait(1)
+
+
 __all__ = [
     "turn",
     "move_forward",
@@ -81,4 +153,10 @@ __all__ = [
     "mount_horse",
     "dismount_horse",
     "stop_horse",
+    "turn_left",
+    "turn_right",
+    "move_backward",
+    "move_left", 
+    "move_right",
+    "walk_to_location",
 ]

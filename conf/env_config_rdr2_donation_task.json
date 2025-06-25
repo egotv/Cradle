@@ -1,0 +1,158 @@
+{
+    "env_name": "Red Dead Redemption 2",
+    "sub_path": "rdr2",
+    "env_short_name": "rdr2",
+    "is_game": true,
+    "skill_registry_name": "cradle.environment.rdr2.skill_registry.RDR2SkillRegistry",
+    "ui_control_name": "cradle.environment.rdr2.ui_control.RDR2UIControl",
+    "task_description_list": [
+        {
+            "id": 1,
+            "task_description": "Walk up to the camp donation center and donate 1 quantity of Platinum Engraved Buckle and 1 quantity of Platinum Pocket Watch to help fund the gang's activities.",
+            "sub_task_description_list": [
+                "Walk to the blue-cloth barrel (camp donation box) in Horseshoe Overlook",
+                "Press E when the \"CONTRIBUTE\" prompt appears to open the contribution menu",
+                "Press Space to choose \"Give Item\" (top entry) and open the satchel",
+                "With the Donations tab highlighted (Q / E toggles) use the Arrow keys to keep the red box on the Platinum Engraved Buckle (first slot) and press Space to select it",
+                "Press Space again to confirm DONATE (bottom-right prompt)",
+                "The menu closes – press E once more, then Space to re-enter \"Give Item\"",
+                "Highlight the Platinum Pocket Watch (third slot), press Space to select, then Space to DONATE",
+                "Press Esc to leave the donation interface once both items are donated"
+            ]
+        }
+    ],
+    "skill_configs": {
+        "skill_from_default": false,
+        "skill_mode": "Basic",
+                "skill_names_basic": [
+            "contribute_to_camp",
+            "select_give_item",
+            "select_item_to_donate",
+            "donate_selected_item",
+            "navigate_donation_items_up",
+            "navigate_donation_items_down",
+            "navigate_categories_left",
+            "navigate_categories_right",
+            "back_to_donation_menu",
+            "exit_donation_menu",
+            "select_platinum_buckle",
+            "select_platinum_watch",
+            "donate_platinum_items",
+            "approach_and_donate_platinum_items",
+            "move_to_donation_area",
+            "turn_to_find_donation_box",
+            "approach_donation_box",
+            "move_around_camp",
+            "check_for_donation_prompt",
+            "turn",
+            "move_forward",
+            "turn_left",
+            "turn_right",
+            "turn_and_move_forward"
+        ],
+        "skill_names_deny": [
+            "donate_cash",
+            "donate_generated",
+            "increase_amount",
+            "increase_amount_generated",
+            "lower_amount",
+            "lower_amount_generated",
+            "select_option",
+            "select",
+            "photo_mode",
+            "photo_mode_generated",
+            "open_map",
+            "close_map",
+            "open_index",
+            "close_index",
+            "map",
+            "quit_game",
+            "help",
+            "go_back",
+            "go_back_generated",
+            "back",
+            "back_generated",
+            "add_mark",
+            "add_waypoint",
+            "set_waypoint",
+            "cash",
+            "increase_amount",
+            "lower_amount",
+            "select_give_money",
+            "give_money",
+            "select_give_money_generated",
+            "give_money_generated"
+        ],
+        "skill_names_allow": [
+            "turn_and_move_forward",
+            "turn",
+            "move_forward", 
+            "contribute_to_camp",
+            "select_give_item",
+            "select_item_to_donate",
+            "donate_selected_item",
+            "navigate_donation_items_up", 
+            "navigate_donation_items_down",
+            "navigate_categories_left",
+            "navigate_categories_right",
+            "back_to_donation_menu",
+            "exit_donation_menu",
+            "select_platinum_buckle",
+            "select_platinum_watch",
+            "donate_platinum_items",
+            "approach_and_donate_platinum_items"
+        ],
+        "skill_names_movement": [
+            "turn",
+            "move_forward",
+            "turn_and_move_forward"
+        ],
+        "skill_names_donation": [
+            "contribute_to_camp",
+            "select_give_item",
+            "select_item_to_donate", 
+            "donate_selected_item",
+            "navigate_donation_items_up",
+            "navigate_donation_items_down",
+            "navigate_categories_left",
+            "navigate_categories_right",
+            "back_to_donation_menu",
+            "exit_donation_menu",
+            "select_platinum_buckle",
+            "select_platinum_watch",
+            "donate_platinum_items",
+            "approach_and_donate_platinum_items"
+        ]
+    },
+    "planner_params": {
+        "__check_list__": [
+            "action_planning",
+            "information_gathering", 
+            "success_detection",
+            "self_reflection",
+            "task_inference",
+            "information_text_gathering"
+        ],
+        "prompt_paths": {
+            "inputs": {
+                "action_planning": "./res/rdr2/prompts/inputs/action_planning.json",
+                "information_gathering": "./res/rdr2/prompts/inputs/information_gathering.json",
+                "success_detection": "./res/rdr2/prompts/inputs/success_detection.json",
+                "self_reflection": "./res/rdr2/prompts/inputs/self_reflection.json",
+                "task_inference": "./res/rdr2/prompts/inputs/task_inference.json",
+                "information_text_gathering": "./res/rdr2/prompts/inputs/information_text_gathering.json"
+            },
+            "templates": {
+                "action_planning": "./res/rdr2/prompts/templates/action_planning.prompt",
+                "information_gathering": "./res/rdr2/prompts/templates/information_gathering.prompt", 
+                "success_detection": "./res/rdr2/prompts/templates/success_detection.prompt",
+                "self_reflection": "./res/rdr2/prompts/templates/self_reflection.prompt",
+                "task_inference": "./res/rdr2/prompts/templates/task_inference.prompt",
+                "information_text_gathering": "./res/rdr2/prompts/templates/information_text_gathering.prompt"
+            }
+        }
+    },
+    "provider_configs": {
+    },
+    "disable_auto_pause": true
+} 
