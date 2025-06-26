@@ -18,12 +18,26 @@ logger = Logger()
 @register_skill("search_equipment_compendium")
 def search_equipment_compendium():
     """
-    Complete workflow to search for camera in the equipment compendium.
-    IMMEDIATELY opens ESC menu -> Progress -> Compendium -> Equipment -> Search for camera -> Log result
-    This is the MAIN SKILL that should be used for the compendium search task.
+    MAIN COMPENDIUM WORKFLOW: Complete workflow to search for camera in the equipment compendium.
+    This is a UI NAVIGATION ONLY task - no character movement in game world.
+    
+    WORKFLOW: ESC menu -> Progress -> Compendium -> Equipment -> Search for camera -> Log result
+    
+    This is the PRIMARY SKILL for the compendium search task. Use this skill when you need
+    to execute the complete compendium search workflow from start to finish.
+    
+    ALTERNATIVE: You can also use individual skills step by step:
+    1. open_main_menu (ESC)
+    2. select_progress (navigate to Progress)
+    3. select_compendium (access Compendium) 
+    4. select_equipment_category (go to Equipment)
+    5. search_equipment_grid_for_camera (search grid)
+    6. log_search_result (log findings)
+    7. exit_compendium (return to game)
     """
-    logger.write("=== STARTING COMPENDIUM SEARCH TASK ===")
-    logger.write("This task will search for camera in equipment compendium")
+    logger.write("=== STARTING COMPENDIUM SEARCH WORKFLOW ===")
+    logger.write("MAIN TASK: Search for camera in RDR2 equipment compendium")
+    logger.write("METHOD: Pure UI navigation - no character movement")
     
     try:
         # Step 1: IMMEDIATELY Open main menu - do not move around map first!

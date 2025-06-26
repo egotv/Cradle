@@ -8,18 +8,18 @@
     "task_description_list": [
         {
             "id": 1,
-            "task_description": "Search for camera in RDR2 equipment compendium. You must FIRST press ESC to open main menu, then navigate Progress > Compendium > Equipment to search for camera. Do NOT move around the map - go directly to the menu system.",
+            "task_description": "COMPENDIUM SEARCH TASK: You are in RDR2 and need to search for a camera in the equipment compendium. This is a PURE UI NAVIGATION task - NO MOVEMENT around the game world. You must use ONLY menu navigation skills. START IMMEDIATELY with open_main_menu skill to open ESC menu, then follow the exact sequence: Progress > Compendium > Equipment > Search grid. Do NOT use any movement, turning, or walking skills.",
             "sub_task_description_list": [
-                "STEP 1: Press ESC to open the main menu immediately - do not walk around",
-                "STEP 2: Navigate down to PROGRESS menu option using arrow keys",
-                "STEP 3: Press Enter to select PROGRESS",
-                "STEP 4: Move right to highlight COMPENDIUM section",
-                "STEP 5: Press Enter to select COMPENDIUM",
-                "STEP 6: Move right to EQUIPMENT category (from ANIMALS)",
-                "STEP 7: Press Enter to select EQUIPMENT category",
-                "STEP 8: Use arrow keys to search through the equipment grid for camera",
-                "STEP 9: If camera is found, press Enter to view details and log discovery",
-                "STEP 10: Press ESC multiple times to exit back to game"
+                "MANDATORY FIRST ACTION: Use 'open_main_menu' skill to press ESC and open the pause menu - this must be your very first action",
+                "STEP 2: Use 'navigate_to_progress' and 'select_progress' skills to get to the Progress menu section",
+                "STEP 3: Use 'select_compendium' skill to access the Compendium from Progress menu",
+                "STEP 4: Use 'select_equipment_category' skill to navigate from Animals to Equipment category",
+                "STEP 5: Use 'search_for_camera' or 'search_equipment_grid_for_camera' skills to search through the equipment grid systematically",
+                "STEP 6: Use 'view_equipment_details' skill if camera is found to examine it",
+                "STEP 7: Use 'log_search_result' skill to log whether camera was found or not",
+                "STEP 8: Use 'exit_compendium' skill to return to the main game",
+                "ALTERNATIVE: Use 'search_equipment_compendium' as a complete workflow that handles all steps",
+                "REMEMBER: This is UI navigation only - no walking, turning, or moving around the game world"
             ]
         }
     ],
@@ -27,7 +27,6 @@
         "skill_from_default": false,
         "skill_mode": "Basic",
         "skill_names_basic": [
-            "search_equipment_compendium",
             "open_main_menu",
             "navigate_to_progress",
             "select_progress", 
@@ -38,6 +37,7 @@
             "view_equipment_details",
             "exit_compendium",
             "log_compendium_result",
+            "search_equipment_compendium",
             "search_equipment_grid_for_camera",
             "log_search_result",
             "navigate_compendium_categories"
@@ -62,7 +62,6 @@
             "navigate_path"
         ],
         "skill_names_allow": [
-            "search_equipment_compendium",
             "open_main_menu",
             "navigate_to_progress", 
             "select_progress",
@@ -73,6 +72,7 @@
             "view_equipment_details",
             "exit_compendium",
             "log_compendium_result",
+            "search_equipment_compendium",
             "search_equipment_grid_for_camera",
             "log_search_result",
             "navigate_compendium_categories"
