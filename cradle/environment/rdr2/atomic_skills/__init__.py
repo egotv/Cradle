@@ -5,3 +5,4 @@ from .map import *
 from .move import *
 from .trade_utils import *
 from .donate import *
+from .compendium import *

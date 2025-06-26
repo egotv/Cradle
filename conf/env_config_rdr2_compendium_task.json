@@ -1,0 +1,130 @@
+{
+    "env_name": "Red Dead Redemption 2",
+    "sub_path": "rdr2",
+    "env_short_name": "rdr2",
+    "is_game": true,
+    "skill_registry_name": "cradle.environment.rdr2.skill_registry.RDR2SkillRegistry",
+    "ui_control_name": "cradle.environment.rdr2.ui_control.RDR2UIControl",
+    "task_description_list": [
+        {
+            "id": 1,
+            "task_description": "Search for camera in RDR2 equipment compendium. You must FIRST press ESC to open main menu, then navigate Progress > Compendium > Equipment to search for camera. Do NOT move around the map - go directly to the menu system.",
+            "sub_task_description_list": [
+                "STEP 1: Press ESC to open the main menu immediately - do not walk around",
+                "STEP 2: Navigate down to PROGRESS menu option using arrow keys",
+                "STEP 3: Press Enter to select PROGRESS",
+                "STEP 4: Move right to highlight COMPENDIUM section",
+                "STEP 5: Press Enter to select COMPENDIUM",
+                "STEP 6: Move right to EQUIPMENT category (from ANIMALS)",
+                "STEP 7: Press Enter to select EQUIPMENT category",
+                "STEP 8: Use arrow keys to search through the equipment grid for camera",
+                "STEP 9: If camera is found, press Enter to view details and log discovery",
+                "STEP 10: Press ESC multiple times to exit back to game"
+            ]
+        }
+    ],
+    "skill_configs": {
+        "skill_from_default": false,
+        "skill_mode": "Basic",
+        "skill_names_basic": [
+            "search_equipment_compendium",
+            "open_main_menu",
+            "navigate_to_progress",
+            "select_progress", 
+            "select_compendium",
+            "select_equipment_category",
+            "search_for_camera",
+            "navigate_equipment_grid",
+            "view_equipment_details",
+            "exit_compendium",
+            "log_compendium_result",
+            "search_equipment_grid_for_camera",
+            "log_search_result",
+            "navigate_compendium_categories"
+        ],
+        "skill_names_deny": [
+            "shoot",
+            "fight",
+            "mount_horse",
+            "go_to_horse",
+            "select_weapon",
+            "select_sidearm",
+            "donate_cash",
+            "give_money",
+            "quit_game",
+            "turn",
+            "move_forward",
+            "turn_and_move_forward",
+            "move_left",
+            "move_right",
+            "move_backward",
+            "walk_to_location",
+            "navigate_path"
+        ],
+        "skill_names_allow": [
+            "search_equipment_compendium",
+            "open_main_menu",
+            "navigate_to_progress", 
+            "select_progress",
+            "select_compendium",
+            "select_equipment_category",
+            "search_for_camera",
+            "navigate_equipment_grid", 
+            "view_equipment_details",
+            "exit_compendium",
+            "log_compendium_result",
+            "search_equipment_grid_for_camera",
+            "log_search_result",
+            "navigate_compendium_categories"
+        ],
+        "skill_names_movement": [
+        ],
+        "skill_names_compendium": [
+            "open_main_menu",
+            "navigate_to_progress",
+            "select_progress",
+            "select_compendium", 
+            "select_equipment_category",
+            "search_for_camera",
+            "navigate_equipment_grid",
+            "view_equipment_details",
+            "exit_compendium",
+            "log_compendium_result",
+            "search_equipment_compendium",
+            "search_equipment_grid_for_camera",
+            "log_search_result",
+            "navigate_compendium_categories"
+        ]
+    },
+    "planner_params": {
+        "__check_list__": [
+            "action_planning",
+            "information_gathering",
+            "success_detection",
+            "self_reflection", 
+            "task_inference",
+            "information_text_gathering"
+        ],
+        "prompt_paths": {
+            "inputs": {
+                "action_planning": "./res/rdr2/prompts/inputs/action_planning.json",
+                "information_gathering": "./res/rdr2/prompts/inputs/information_gathering.json",
+                "success_detection": "./res/rdr2/prompts/inputs/success_detection.json",
+                "self_reflection": "./res/rdr2/prompts/inputs/self_reflection.json",
+                "task_inference": "./res/rdr2/prompts/inputs/task_inference.json",
+                "information_text_gathering": "./res/rdr2/prompts/inputs/information_text_gathering.json"
+            },
+            "templates": {
+                "action_planning": "./res/rdr2/prompts/templates/action_planning.prompt",
+                "information_gathering": "./res/rdr2/prompts/templates/information_gathering.prompt",
+                "success_detection": "./res/rdr2/prompts/templates/success_detection.prompt", 
+                "self_reflection": "./res/rdr2/prompts/templates/self_reflection.prompt",
+                "task_inference": "./res/rdr2/prompts/templates/task_inference.prompt",
+                "information_text_gathering": "./res/rdr2/prompts/templates/information_text_gathering.prompt"
+            }
+        }
+    },
+    "provider_configs": {
+    },
+    "disable_auto_pause": true
+} 
